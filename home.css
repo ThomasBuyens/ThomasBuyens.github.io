@@ -31,7 +31,9 @@ nav ul {
 #languagemenu a:hover {
     text-decoration: underline;
 }
-
+#mobile-menu {
+    display: none;
+}
 #languagemenu a  {
     font-size: 0.7em;
     padding-top: 1.8em;
@@ -147,7 +149,7 @@ nav #mainmenu li a:hover {
     padding: 1em;
     display: flex;
     flex-direction: column;
-   
+    min-height: 13em;
     font-size: 1em;
     background: rgb(235, 235, 235);
 }
@@ -193,36 +195,16 @@ nav #mainmenu li a:hover {
     text-decoration: underline;
     font-size: 1em;
 }
-#practical table {
-    max-width: 19em;
-}
 
-#practical th, td {
-    border: 1px solid black;
-    padding: 2px 2px;
-    border-radius: 6em;
-    text-align: center;
-    color: black;
-}
-#practical th {
-    color: black;
-    background: rgb(235, 235, 235);
-    
-    
-}
-#practical td:hover {
-    background: rgb(161, 161, 161);
-    background: rgb(235, 235, 235);
-
-}
 .practblock {
     overflow: hidden;
-    height: 5.5em;
+    max-height: 5.5em;
 }
 
 .practblock:hover {
     height: auto;
-
+    max-height: 10em;
+    transition:max-height 1s ease-out;
 }
 .practblock:hover img {
     display: none;
@@ -337,7 +319,7 @@ footer {
     background: black;
     color: rgb(235, 235, 235);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 footer p {
     margin: 1em 0em 0em 0em;
@@ -405,10 +387,20 @@ float: right;
     } 
     #mainmenu {
         flex-direction: column;
-        justify-content: center;
         align-self: center;
         min-width: 100%;
+        overflow: hidden;
+        max-height: 6em;
     } 
+    #mainmenu.clicked {
+        height: auto;
+        max-height: 100em;
+        justify-content: center;
+    }
+    #mobile-menu {
+        display: flex;
+        text-decoration: underline;
+    }
     #mainmenu li {
         justify-content: center;
         width: 100%;
@@ -436,12 +428,12 @@ float: right;
         text-align: center;
     }
     .contactrow > * {
-        min-width: 300px;
+        min-width: 350px;
     }
   }
   
-  @media screen and (max-width: 300px) {
+  @media screen and (max-width: 352px) {
     .contactrow > * {
-        min-width: 200px;
+        min-width: 300px;
     }
   }

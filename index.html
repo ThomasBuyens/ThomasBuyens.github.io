@@ -15,6 +15,7 @@
       
       <ul id="mainmenu">
         <li><img src="icons/logo2.png" alt=""></li>
+        <li id="mobile-menu" ><a href="#">Menu</a></li>
         <li><a href="#aboutt">About</a></li>
         <li><a href="#team">Team</a></li>
         <li><a href="#practical">Practical info</a></li>
@@ -150,7 +151,6 @@
   </main>
   <footer>
     <p>&copy Thomas Buyens</p>
-    <p>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
   </footer>
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwCeMslNZ4kIo8KRaDPILoyoxc7WHS7m6mWrQWNBADQ67VCOfd0/exec'
@@ -161,6 +161,19 @@
       fetch(scriptURL, { method: 'post', body: new FormData(form)})
         .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
         .catch(error => console.error('Error!', error.message))
+    })
+    let menu_click = document.getElementById("mobile-menu");
+    let menu = document.getElementById("mainmenu");
+    var clicking = false;
+    menu_click.addEventListener('click', function() {
+        if (clicking) {
+          menu.classList.remove("clicked");
+          clicking = false;
+        } else {
+          menu.classList.add("clicked");
+          clicking = true;
+        }
+        
     })
   </script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
