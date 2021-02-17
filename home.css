@@ -7,9 +7,7 @@ body {
     font-size: small;
     font-family: 'Montserrat', sans-serif;
 }
-header {
 
-}
 nav {
     display: flex;
     justify-content: space-between;
@@ -50,9 +48,7 @@ nav li a {
     color: rgb(235, 235, 235);
 }
 
-nav #mainmenu li a {
-    
-}
+
 nav #mainmenu li a:hover {
     background-color: rgb(235, 235, 235);
     color: black;
@@ -62,20 +58,18 @@ nav #mainmenu li a:hover {
 #intro {
   background: url(pictures/vub-pool.jpg);
   margin-top: 3em;
-  width: 100%;
+  max-width: 100%;
   height: 50vh;
   background-size: cover;
   display: flex;
- align-items: flex-end;
+  align-items: flex-end;
+  justify-content: center;
 }
 #maintitle {
     font-size: 3em;
-    max-height: 1.2em;
     color: rgb(235, 235, 235);
-    width: 8.5em;
     text-align: center;
     padding: 0em 0.1em;
-    margin: 1em;
     background-color: black;
     text-transform: uppercase;
 }
@@ -163,10 +157,14 @@ nav #mainmenu li a:hover {
 }
 .practrow {
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: space-around;  
 }
-.practrow > * {
+.up, .down {
+    display: flex;
+    justify-content: space-around;
+    flex: 1 0 5em;
+}
+.up > *, .down > * {
     border: solid 1px rgba(0, 0, 0, 0.37);
     margin: 1em;
     flex: 1 0 20%;
@@ -217,20 +215,38 @@ nav #mainmenu li a:hover {
     background: rgb(235, 235, 235);
 
 }
+.practblock {
+    overflow: hidden;
+    height: 5.5em;
+}
+
+.practblock:hover {
+    height: auto;
+
+}
+.practblock:hover img {
+    display: none;
+}
+.dropdown {
+    width: 1em;
+}
 .contact {
     margin: 1em;
     display: flex;
     flex-direction: column;
     
 }
-.contact h2 {
-    text-align: center;
-    margin: 0;
-}
+
+
 .contactrow {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.contactrow * {
+    max-width: 100%;
     
 }
 .contact h3 {
@@ -241,22 +257,23 @@ nav #mainmenu li a:hover {
 .contactrow > * {
     margin: 1em;
     padding: 1em;
-    
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 0 auto;
 }
 
 div.contact-info {
     background: white;
     box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
-    
+    display: flex;
+    flex-direction: column;
 }
 div.contact-info p {
     display: flex;
     align-items:center;
 }
-div.contact-info img {
-    width: 1em;
-    padding: 0em 0.5em;
-}
+
 iframe {
     background-color: white;
     box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
@@ -298,6 +315,23 @@ label {
     align-self: flex-end;
     padding: 0.2 0.5em;
     margin-top: 1em;
+} 
+h2 {
+    text-transform: uppercase;
+}
+.contact h2 {
+    text-align: center;
+    margin: 0;
+}
+.message-box {
+    display: flex;
+    flex-direction: column;
+}
+
+div.contact-info img {
+    width: 1em;
+    height: 1em;
+    padding: 0em 0.5em;
 }
 footer {
     background: black;
@@ -335,12 +369,13 @@ footer a {
     position: relative;
     padding: 0;
     outline: 0;
-    width: 600px
+    width: 600px;
 }
 span.popupx img {
 height: 1em;
 width: 1em;
 padding: 1px;
+margin: 1px;
 float: right;
 }
 #id01 p {
@@ -349,16 +384,16 @@ float: right;
 
 @media screen and (max-width: 850px) {
     .contactrow {
-    
         flex-direction: column;
         justify-content: center;
         align-items: center;
     } 
-    .contactrow > *  {
-        flex: 0 1 auto;
+    .contactrow > * {
         min-width: 400px;
     }
-
+    .w3-modal-content {
+        width: 80%;
+    }
   }
 
   @media screen and (max-width: 535px) {
@@ -372,13 +407,41 @@ float: right;
         flex-direction: column;
         justify-content: center;
         align-self: center;
-        
+        min-width: 100%;
     } 
     #mainmenu li {
         justify-content: center;
+        width: 100%;
+    }
+    #mainmenu li a {
+        min-width: 100%;
+        text-align: center;
     }
     #intro {
         margin-top: 0;
+        max-height: 30vh;
     }
 
+    .practrow {
+        flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 405px) {
+    #mainmenu li {
+        width: 100%;
+    }
+    #mainmenu li a {
+        min-width: 100%;
+        text-align: center;
+    }
+    .contactrow > * {
+        min-width: 300px;
+    }
+  }
+  
+  @media screen and (max-width: 300px) {
+    .contactrow > * {
+        min-width: 200px;
+    }
   }

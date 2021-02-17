@@ -78,24 +78,32 @@
     <hr>
     <section id="practical">
       <h2>Practical information</h2>
-      <div class="practrow">
-        <div class="what">
+    <div class="practrow">
+      <div class="practrow up">
+        <div class="what practblock">
           <h3>What?</h3>
+          <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
           <p>A bundle of 10 swimming lessons</p>
         </div>
-        <div class="when?">
+        <div class="when practblock">
           <h3>When?</h3>
+          <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
           <p>Sunday 9-10am<br><button onclick="document.getElementById('id01').style.display='block'" class="dataknop" title="data">Data</button></p>
         </div>
-        <div class="cost?">
+      </div>
+      <div class="practrow down">
+        <div class="cost practblock">
           <h3>Cost?</h3>
+          <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
           <p>100€</p>
         </div>
-        <div class="where?">
+        <div class="where practblock">
           <h3>Where?</h3>
+          <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
           <p>VUB swimming pool</p>
         </div>
       </div>
+  </div>
       <div id="id01" class="w3-modal">
         <div class="w3-modal-content w3-card-4 w3-animate-top">
           <header class="w3-container w3-teal w3-display-container"> 
@@ -107,34 +115,12 @@
         </div>
       </div>
 
-      <!-- <table>
-        <thead>
-          <tr>
-            <th>Practical information</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>10 sessions per course</td>
-          </tr>
-          <tr>
-            <td>One session every sunday from 9-10am</td>
-          </tr>
-          <tr>
-            <td>100€/course</td>
-          </tr>
-          <tr>
-            <td>Location: VUB swimming pool</td>
-          </tr>
-
-        </tbody>
-      </table> -->
     </section>
     <hr>
-    <section class="contact">
+    <section id="contact" class="contact">
       <h2>Contact</h2>
       <div class="contactrow">
-        <div class="message-box">
+        <div class="message-box child">
           <h3>Contact us</h3>
           <form method="post" name="google-sheet" class="message" >
             <div class="message-item">
@@ -152,13 +138,13 @@
             <input type="submit" name="submit" class="knop">
           </form>
         </div>
-        <div class="contact-info">
+        <div class="contact-info child">
           <h3>Contact info</h3>
           <p><img src="icons/location.png" alt="location">Boulevard de la Plaine 2, 1050 Ixelles</p>
           <p><img src="icons/phone-call.png" alt="phone"><i class="fa fa-phone w3-text-teal w3-xlarge"></i>+32479020578</p>
           <p><img src="icons/mail.png" alt="mail"><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>start_to_swim@hotmail.com</p>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.3738420510563!2d4.393124415744947!3d50.824238979528715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c4c83599ef97%3A0x14f381e79c97f818!2sPiscine%20VUB!5e0!3m2!1sen!2sbe!4v1613041206081!5m2!1sen!2sbe" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.3738420510563!2d4.393124415744947!3d50.824238979528715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c4c83599ef97%3A0x14f381e79c97f818!2sPiscine%20VUB!5e0!3m2!1sen!2sbe!4v1613041206081!5m2!1sen!2sbe" class="child" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
     </section>
   </main>
