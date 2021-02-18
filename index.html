@@ -17,8 +17,8 @@
         <li><img src="icons/logo2.png" alt=""></li>
         <li id="mobile-menu"><a href="#">Menu</a></li>
         <li><a href="#aboutt">About</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#practical">Practical info</a></li>
+        <li><a href="#team">Coaches</a></li>
+        <li><a id="practmenu" href="#practical">Practical information</a></li>
         <li><a href="#contact">Contact us</a></li>
       </ul>
       <ul id="languagemenu">
@@ -166,9 +166,10 @@
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'post', body: new FormData(form) })
-        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .then(response => alert("Thanks for Contacting us! We Will get back to you as soon as possible..."))
         .catch(error => console.error('Error!', error.message))
     })
+    //SMALL SCREENS
     let menu_click = document.getElementById("mobile-menu");
     let menu = document.getElementById("mainmenu");
     var clicking = false;
@@ -181,10 +182,13 @@
         clicking = true;
       }
     })
-    //SMALL SCREENS
+    window.addEventListener('touchmove', function () {
+      menu.classList.remove("clicked");
+        clicking = false;
+    })
     let practblock = document.getElementsByClassName("practblock");
     for (let index = 0; index < practblock.length; index++) {
-      practblock[index].addEventListener('touchstart', function () {
+      practblock[index].addEventListener('touchend', function () {
         console.log(practblock[index]);
         if (clicking) {
           practblock[index].classList.remove("clicked");
@@ -196,6 +200,13 @@
       })
 
     }
+    let practmenu = document.getElementById("practmenu");
+    practmenu.addEventListener('click', function() {
+      for (let index = 0; index < practblock.length; index++) {
+        practblock[index].classList.add("clicked");
+          clicking = true;
+      }
+    })
     //BIG SCREENS
     var hovering = false;
     for (let index = 0; index < practblock.length; index++) {
