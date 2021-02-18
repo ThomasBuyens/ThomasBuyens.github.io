@@ -184,7 +184,7 @@
     //SMALL SCREENS
     let practblock = document.getElementsByClassName("practblock");
     for (let index = 0; index < practblock.length; index++) {
-      practblock[index].addEventListener('click', function () {
+      practblock[index].addEventListener('touchstart', function () {
         console.log(practblock[index]);
         if (clicking) {
           practblock[index].classList.remove("clicked");
