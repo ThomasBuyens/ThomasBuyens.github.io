@@ -12,10 +12,10 @@
 <body>
   <header>
     <nav>
-      
+
       <ul id="mainmenu">
         <li><img src="icons/logo2.png" alt=""></li>
-        <li id="mobile-menu" ><a href="#">Menu</a></li>
+        <li id="mobile-menu"><a href="#">Menu</a></li>
         <li><a href="#aboutt">About</a></li>
         <li><a href="#team">Team</a></li>
         <li><a href="#practical">Practical info</a></li>
@@ -79,40 +79,43 @@
     <hr>
     <section id="practical">
       <h2>Practical information</h2>
-    <div class="practrow">
-      <div class="practrow up">
-        <div class="what practblock">
-          <h3>What?</h3>
-          <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
-          <p>A bundle of 10 swimming lessons</p>
+      <div class="practrow">
+        <div class="practrow up">
+          <div class="what practblock">
+            <h3>What?</h3>
+            <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
+            <p>A bundle of 10 swimming lessons</p>
+          </div>
+          <div class="when practblock">
+            <h3>When?</h3>
+            <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
+            <p>Sunday 9-10am<br><button onclick="document.getElementById('id01').style.display='block'" class="dataknop"
+                title="data">Dates</button></p>
+          </div>
         </div>
-        <div class="when practblock">
-          <h3>When?</h3>
-          <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
-          <p>Sunday 9-10am<br><button onclick="document.getElementById('id01').style.display='block'" class="dataknop" title="data">Data</button></p>
+        <div class="practrow down">
+          <div class="cost practblock">
+            <h3>Cost?</h3>
+            <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
+            <p>100€</p>
+          </div>
+          <div class="where practblock">
+            <h3>Where?</h3>
+            <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
+            <p>VUB swimming pool</p>
+          </div>
         </div>
       </div>
-      <div class="practrow down">
-        <div class="cost practblock">
-          <h3>Cost?</h3>
-          <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
-          <p>100€</p>
-        </div>
-        <div class="where practblock">
-          <h3>Where?</h3>
-          <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
-          <p>VUB swimming pool</p>
-        </div>
-      </div>
-  </div>
       <div id="id01" class="w3-modal">
         <div class="w3-modal-content w3-card-4 w3-animate-top">
-          <header class="w3-container w3-teal w3-display-container"> 
-            <span onclick="document.getElementById('id01').style.display='none'" class="popupx"><i class="popupxx"><img src="pictures/xpng.png" alt=""></i></span>
+          <header class="w3-container w3-teal w3-display-container">
+            <span onclick="document.getElementById('id01').style.display='none'" class="popupx"><i class="popupxx"><img
+                  src="pictures/xpng.png" alt=""></i></span>
             <div>
-              <p>The lessons are temporarly on hold due to the current health and safety measures <br>We will post new dates here as soon as possible!</p>
+              <p>The lessons are temporarly on hold due to the current health and safety measures <br>We will post new
+                dates here as soon as possible!</p>
             </div>
-            
+
         </div>
       </div>
 
@@ -123,7 +126,7 @@
       <div class="contactrow">
         <div class="message-box child">
           <h3>Contact us</h3>
-          <form method="post" name="google-sheet" class="message" >
+          <form method="post" name="google-sheet" class="message">
             <div class="message-item">
               <label>Name</label>
               <input class="w3-input" type="text" name="Name" required>
@@ -142,10 +145,14 @@
         <div class="contact-info child">
           <h3>Contact info</h3>
           <p><img src="icons/location.png" alt="location">Boulevard de la Plaine 2, 1050 Ixelles</p>
-          <p><img src="icons/phone-call.png" alt="phone"><i class="fa fa-phone w3-text-teal w3-xlarge"></i>+32479020578</p>
-          <p><img src="icons/mail.png" alt="mail"><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>start_to_swim@hotmail.com</p>
+          <p><img src="icons/phone-call.png" alt="phone"><i class="fa fa-phone w3-text-teal w3-xlarge"></i>+32479020578
+          </p>
+          <p><img src="icons/mail.png" alt="mail"><i
+              class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>start_to_swim@hotmail.com</p>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.3738420510563!2d4.393124415744947!3d50.824238979528715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c4c83599ef97%3A0x14f381e79c97f818!2sPiscine%20VUB!5e0!3m2!1sen!2sbe!4v1613041206081!5m2!1sen!2sbe" class="child" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.3738420510563!2d4.393124415744947!3d50.824238979528715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c4c83599ef97%3A0x14f381e79c97f818!2sPiscine%20VUB!5e0!3m2!1sen!2sbe!4v1613041206081!5m2!1sen!2sbe"
+          class="child" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
     </section>
   </main>
@@ -155,30 +162,56 @@
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwCeMslNZ4kIo8KRaDPILoyoxc7WHS7m6mWrQWNBADQ67VCOfd0/exec'
     const form = document.forms['google-sheet']
-  
+
     form.addEventListener('submit', e => {
       e.preventDefault()
-      fetch(scriptURL, { method: 'post', body: new FormData(form)})
+      fetch(scriptURL, { method: 'post', body: new FormData(form) })
         .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
         .catch(error => console.error('Error!', error.message))
     })
     let menu_click = document.getElementById("mobile-menu");
     let menu = document.getElementById("mainmenu");
     var clicking = false;
-    menu_click.addEventListener('click', function() {
+    menu_click.addEventListener('click', function () {
+      if (clicking) {
+        menu.classList.remove("clicked");
+        clicking = false;
+      } else {
+        menu.classList.add("clicked");
+        clicking = true;
+      }
+    })
+    //SMALL SCREENS
+    let practblock = document.getElementsByClassName("practblock");
+    for (let index = 0; index < practblock.length; index++) {
+      practblock[index].addEventListener('click', function () {
+        console.log(practblock[index]);
         if (clicking) {
-          menu.classList.remove("clicked");
+          practblock[index].classList.remove("clicked");
           clicking = false;
         } else {
-          menu.classList.add("clicked");
+          practblock[index].classList.add("clicked");
           clicking = true;
         }
-        
-    })
+      })
+
+    }
+    //BIG SCREENS
+    var hovering = false;
+    for (let index = 0; index < practblock.length; index++) {
+      practblock[index].addEventListener('mouseover', function () {
+        console.log(practblock[index]);
+        practblock[index].classList.add("hover");
+      })
+      practblock[index].addEventListener('mouseout', function () {
+        practblock[index].classList.remove("hover");
+
+      })
+    }
   </script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </body>
 
 </html>

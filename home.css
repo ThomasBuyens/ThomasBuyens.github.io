@@ -102,7 +102,7 @@ nav #mainmenu li a:hover {
     margin: 1em 5em;
     flex-direction: column;
     align-items: center;
-    width: 20%;
+    max-width: 30%;
     height: auto;
 }
 
@@ -112,10 +112,12 @@ nav #mainmenu li a:hover {
 }
 .member-item p {
     margin-top: 0;
+    text-align: center;
 }
 .member-item h3 {
     margin-bottom: 0;
     font-size: 1.3em;
+    text-align: center;
 }
 #about {
     display: flex;
@@ -183,8 +185,14 @@ nav #mainmenu li a:hover {
 .practrow p {
     line-height: 1.5em;
 }
+.dataknop {
+    background-color: black;
+    border: none;
+    color: whitesmoke;
+    text-decoration: underline;
+}
 .dataknop:hover {
-    background: white;
+    font-weight: bold;
 }
 .practrow * {
     text-align: center;
@@ -196,19 +204,8 @@ nav #mainmenu li a:hover {
     font-size: 1em;
 }
 
-.practblock {
-    overflow: hidden;
-    max-height: 5.5em;
-}
 
-.practblock:hover {
-    height: auto;
-    max-height: 10em;
-    transition:max-height 1s ease-out;
-}
-.practblock:hover img {
-    display: none;
-}
+
 .dropdown {
     width: 1em;
 }
@@ -347,21 +344,44 @@ footer a {
 
 .w3-modal-content {
     margin: auto;
-    background-color: #fff;
+    background-color: whitesmoke;
     position: relative;
     padding: 0;
     outline: 0;
     width: 600px;
+    border-radius: 0.8em;
 }
 span.popupx img {
 height: 1em;
 width: 1em;
 padding: 1px;
-margin: 1px;
+margin: 2px;
+margin: 0.2em;
 float: right;
 }
 #id01 p {
     padding: 1em;
+}
+@media screen and (min-width: 536px) {
+    .practblock {
+        overflow: hidden;
+        max-height: 5.5em;
+    }
+    .practblock.hover {
+        height: auto;
+        max-height: 9em;
+        transition:all 1s ease-out;
+    }
+    .practblock img{
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 1s linear;
+    }
+    .practblock.hover img {
+        visibility: collapse;
+        opacity: 0;
+        position: absolute;
+    } 
 }
 
 @media screen and (max-width: 850px) {
@@ -381,9 +401,9 @@ float: right;
   @media screen and (max-width: 535px) {
     nav {
         flex-direction: column;
-        justify-content: center;
+        
         align-items: center;
-        position: static;
+        position: absolute;
     } 
     #mainmenu {
         flex-direction: column;
@@ -391,11 +411,12 @@ float: right;
         min-width: 100%;
         overflow: hidden;
         max-height: 6em;
+        
     } 
     #mainmenu.clicked {
         height: auto;
         max-height: 100em;
-        justify-content: center;
+        transition: all 2s;
     }
     #mobile-menu {
         display: flex;
@@ -410,13 +431,36 @@ float: right;
         text-align: center;
     }
     #intro {
-        margin-top: 0;
-        max-height: 30vh;
+        margin-top: 5em;
+        max-height: 80vh;
     }
-
+    .member-item {
+        max-width: 50%;
+        margin: 1em 2em;
+    }
     .practrow {
         flex-direction: column;
     }
+    .practblock {
+        overflow: hidden;
+        max-height: 5.5em;
+        transition:max-height 1s ease-out;
+    }
+    
+    .practblock.clicked {
+        height: auto;
+        max-height: 10em;
+        transition:all 1s ease-out;
+    }
+    .practblock img{
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 0.2s linear;
+    }
+    .practblock.clicked img {
+        visibility:hidden;
+        opacity: 0;
+    } 
   }
 
   @media screen and (max-width: 405px) {
