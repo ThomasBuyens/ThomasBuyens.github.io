@@ -129,7 +129,10 @@ nav #mainmenu li a:hover {
     color: black;
     line-height: 150%;
 }
-
+#about p {
+    max-width: 60em;
+    text-align: justify;
+}
 .top {
     padding: 0em 1em;
 }
