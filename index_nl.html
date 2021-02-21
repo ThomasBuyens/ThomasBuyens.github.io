@@ -16,10 +16,10 @@
       <ul id="mainmenu">
         <li><img src="icons/logo2.png" alt=""></li>
         <li id="mobile-menu"><a href="#">Menu</a></li>
-        <li><a href="#aboutt">About us</a></li>
-        <li><a href="#team">Coaches</a></li>
-        <li><a id="practmenu" href="#practical">Practical information</a></li>
-        <li><a href="#contact">Contact us</a></li>
+        <li><a href="#aboutt">Over ons</a></li>
+        <li><a href="#team">Instructeurs</a></li>
+        <li><a id="practmenu" href="#practical">Praktische informatie</a></li>
+        <li><a href="#contact">Contacteer ons</a></li>
       </ul>
       <ul id="languagemenu">
         <li><a href="index.html">EN</a></li>
@@ -36,7 +36,7 @@
     <div id="aboutt"></div>
     <section id="about">
       <div class="top">
-        <h2>About us</h2>
+        <h2>Over ons</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -59,50 +59,50 @@
     <hr>
     <section id="team">
       <div id="teamtitle">
-        <h2>THE COACHES</h2>
+        <h2>Instructeurs</h2>
 
       </div>
       <div id="members">
         <div class="member-item">
           <img src="pictures/Michael-Phelps-Speaker-copy.jpg" alt="Boss">
           <h3>Abdelaziz Sahli</h3>
-          <p>Creator & instructor</p>
+          <p>Stichter & instructeur</p>
         </div>
 
         <div class="member-item">
           <img src="pictures/Thomas2.jpg" alt="Boss">
           <h3>Thomas Buyens</h3>
-          <p>Instructor</p>
+          <p>Instructeur</p>
         </div>
       </div>
     </section>
     <hr>
     <section id="practical">
-      <h2>Practical information</h2>
+      <h2>Praktische informatie</h2>
       <div class="practrow">
         <div class="practrow up">
           <div class="what practblock">
-            <h3>What?</h3>
+            <h3>Wat?</h3>
             <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
-            <p>A bundle of 10 swimming lessons</p>
+            <p>Een bundel van 10 zwemlessen</p>
           </div>
           <div class="when practblock">
-            <h3>When?</h3>
+            <h3>Wanneer?</h3>
             <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
-            <p>Sunday 9-10am<br><button onclick="document.getElementById('id01').style.display='block'" class="dataknop"
-                title="data">Dates</button></p>
+            <p>Zondag 9-10u<br><button onclick="document.getElementById('id01').style.display='block'" class="dataknop"
+                title="data">Data</button></p>
           </div>
         </div>
         <div class="practrow down">
           <div class="cost practblock">
-            <h3>Cost?</h3>
+            <h3>Kost?</h3>
             <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
             <p>100€</p>
           </div>
           <div class="where practblock">
-            <h3>Where?</h3>
+            <h3>Waar?</h3>
             <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
-            <p>VUB swimming pool</p>
+            <p>VUB zwembad</p>
           </div>
         </div>
       </div>
@@ -112,8 +112,7 @@
             <span onclick="document.getElementById('id01').style.display='none'" class="popupx"><i class="popupxx"><img
                   src="pictures/xpng.png" alt=""></i></span>
             <div>
-              <p>The lessons are temporarly on hold due to the current health and safety measures <br>We will post new
-                dates here as soon as possible!</p>
+              <p>De lessen gaan tijdelijk niet door omwille van de huidige sanitaire maatregelen. <br>We zullen de data hier aanvullen zodra het mogelijk is!</p>
             </div>
 
         </div>
@@ -125,10 +124,10 @@
       <h2>Contact</h2>
       <div class="contactrow">
         <div class="message-box child">
-          <h3>Contact us</h3>
+          <h3>Contacteer ons</h3>
           <form method="post" name="google-sheet" class="message">
             <div class="message-item">
-              <label>Name</label>
+              <label>Naam</label>
               <input class="w3-input" type="text" name="Name" required>
             </div>
             <div class="message-item">
@@ -136,7 +135,7 @@
               <input class="w3-input" type="text" name="Email" required>
             </div>
             <div class="message-item">
-              <label>Message</label>
+              <label>Bericht</label>
               <input class="w3-input" id="bericht" type="text" name="Message" required>
             </div>
             <input type="submit" name="submit" class="knop">
@@ -144,7 +143,7 @@
         </div>
         <div class="contact-info child">
           <h3>Contact info</h3>
-          <p><img src="icons/location.png" alt="location">Boulevard de la Plaine 2, 1050 Ixelles</p>
+          <p><img src="icons/location.png" alt="location">Pleinlaan 2, 1050 Elsene</p>
           <p><img src="icons/phone-call.png" alt="phone"><i class="fa fa-phone w3-text-teal w3-xlarge"></i>+32479020578
           </p>
           <p><img src="icons/mail.png" alt="mail"><i
@@ -167,7 +166,7 @@
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'post', body: new FormData(form) })
-        .then(response => alert("Thanks for Contacting us! We Will get back to you as soon as possible..."))
+        .then(response => alert("Bedankt voor je bericht! We antwoorden je zo snel mogelijk.."))
         .catch(error => console.error('Error!', error.message))
     })
     //SMALL SCREENS
