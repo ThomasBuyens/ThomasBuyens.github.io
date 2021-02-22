@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
+html {
+    scroll-padding-top: 2.5em; /* height of sticky header */
+  }
 body {
     color: black;
     margin: 0;
@@ -16,6 +18,7 @@ nav {
     z-index: 1;
     position: fixed;
     top: 0;
+    scroll-padding-top: 3em;
 
 }
 nav ul img {
@@ -108,7 +111,7 @@ nav #mainmenu li a:hover {
 
 .member-item img {
     max-width: 100%;
-    border-radius: 10em;
+    
 }
 .member-item p {
     margin-top: 0;
@@ -255,7 +258,13 @@ div.contact-info p {
     display: flex;
     align-items:center;
 }
-
+#mailto {
+    text-decoration: none;
+    color: black;
+}
+#mailto:hover {
+    cursor: pointer;
+}
 iframe {
     background-color: white;
     box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
