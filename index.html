@@ -49,9 +49,9 @@
           est laborum.</p>
       </div>
       <div class="imageholder">
-        <img src="pictures/butterfly.jpg" alt="butterfly">
-        <img src="pictures/backstroke.jpg" alt="">
-        <img src="pictures/breaststroke_600x600.jpg" alt="">
+        <img src="pictures/papillonAbdelaziz.jpg" alt="butterfly">
+        <img src="pictures/backstrokeAbdelaziz.jpg" alt="">
+        <img src="pictures/breaststroke.png" alt="">
         <img src="pictures/crawl.jpg" alt="">
       </div>
 
@@ -186,14 +186,17 @@
         clicking = false;
     })
     let practblock = document.getElementsByClassName("practblock");
+    let dropdown = document.getElementsByClassName("dropdown");
     for (let index = 0; index < practblock.length; index++) {
-      practblock[index].addEventListener('touchend', function () {
+      dropdown[index].addEventListener('touchend', function () {
         console.log(practblock[index]);
         if (clicking) {
           practblock[index].classList.remove("clicked");
+          dropdown[index].setAttribute('src', 'icons/dropdown.png');
           clicking = false;
         } else {
           practblock[index].classList.add("clicked");
+          dropdown[index].setAttribute('src', 'icons/dropup.png');
           clicking = true;
         }
       })
@@ -203,6 +206,7 @@
     practmenu.addEventListener('click', function() {
       for (let index = 0; index < practblock.length; index++) {
         practblock[index].classList.add("clicked");
+        dropdown[index].setAttribute('src', 'icons/dropup.png');
           clicking = true;
       }
     })

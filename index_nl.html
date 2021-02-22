@@ -95,7 +95,7 @@
         </div>
         <div class="practrow down">
           <div class="cost practblock">
-            <h3>Kost?</h3>
+            <h3>Hoeveel?</h3>
             <img class="dropdown" src="icons/dropdown.png" alt="dropdown">
             <p>100€</p>
           </div>
@@ -187,14 +187,17 @@
         clicking = false;
     })
     let practblock = document.getElementsByClassName("practblock");
+    let dropdown = document.getElementsByClassName("dropdown");
     for (let index = 0; index < practblock.length; index++) {
-      practblock[index].addEventListener('touchend', function () {
+      dropdown[index].addEventListener('touchend', function () {
         console.log(practblock[index]);
         if (clicking) {
           practblock[index].classList.remove("clicked");
+          dropdown[index].setAttribute('src', 'icons/dropdown.png');
           clicking = false;
         } else {
           practblock[index].classList.add("clicked");
+          dropdown[index].setAttribute('src', 'icons/dropup.png');
           clicking = true;
         }
       })
@@ -204,6 +207,7 @@
     practmenu.addEventListener('click', function() {
       for (let index = 0; index < practblock.length; index++) {
         practblock[index].classList.add("clicked");
+        dropdown[index].setAttribute('src', 'icons/dropup.png');
           clicking = true;
       }
     })
