@@ -76,6 +76,11 @@ nav #mainmenu li a:hover {
 .intro_imageTwo {
     background: url(pictures/dive.jpg);
 }
+@media screen and (min-width: 850px) {
+    .intro_imageTwo {
+        background: url(pictures/dive2.jpg);
+    }
+}
 .intro_imageThree {
     background: url(pictures/water.jpg);
 }
