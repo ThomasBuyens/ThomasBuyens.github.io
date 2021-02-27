@@ -61,15 +61,57 @@ nav #mainmenu li a:hover {
 
 
 #intro {
-  background: url(pictures/vub-pool.jpg);
   margin-top: 3em;
   max-width: 100%;
   height: 50vh;
   background-size: cover;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: space-between;
 }
+
+.intro_imageOne {
+    background: url(pictures/vub-pool.jpg);
+}
+.intro_imageTwo {
+    background: url(pictures/dive.jpg);
+}
+.intro_imageThree {
+    background: url(pictures/water.jpg);
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    align-self: center;
+    /* position: absolute;
+    top: 50%; */
+    width: auto;
+    
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+
 #maintitle {
     font-size: 3em;
     color: rgb(235, 235, 235);
@@ -77,6 +119,11 @@ nav #mainmenu li a:hover {
     padding: 0em 0.1em;
     background-color: black;
     text-transform: uppercase;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    
 }
 
 #team {

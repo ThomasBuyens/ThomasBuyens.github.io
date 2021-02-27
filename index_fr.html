@@ -29,7 +29,9 @@
     </nav>
   </header>
   <main>
-    <section id="intro">
+    <section id="intro" class="intro_imageOne">
+      <a class="prev">&#10094;</a>
+      <a class="next">&#10095;</a>
       <!-- <img id="topimage" src="pictures/vub-pool.jpg" alt="pool picture"> -->
       <h2 id="maintitle">Start to swim</h2>
     </section>
@@ -158,72 +160,7 @@
   <footer>
     <p>&copy Thomas Buyens</p>
   </footer>
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwCeMslNZ4kIo8KRaDPILoyoxc7WHS7m6mWrQWNBADQ67VCOfd0/exec'
-    const sendEmail = 'https://script.google.com/macros/s/AKfycbwwc_EfSX2Ncb0hOfPCBJUsQlhc9OscuYc1BgP70bEnUAscBk131NfnGw/exec'
-    const form = document.forms['google-sheet']
-
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'post', body: new FormData(form) })
-        .then(response => alert("Merci pour votre message! Nous vous répondons au plus vite.."))
-        .catch(error => console.error('Error!', error.message))
-    })
-    //SMALL SCREENS
-    let menu_click = document.getElementById("mobile-menu");
-    let menu = document.getElementById("mainmenu");
-    var clicking = false;
-    menu_click.addEventListener('click', function () {
-      if (clicking) {
-        menu.classList.remove("clicked");
-        clicking = false;
-      } else {
-        menu.classList.add("clicked");
-        clicking = true;
-      }
-    })
-    window.addEventListener('touchmove', function () {
-      menu.classList.remove("clicked");
-        clicking = false;
-    })
-    let practblock = document.getElementsByClassName("practblock");
-    let dropdown = document.getElementsByClassName("dropdown");
-    for (let index = 0; index < practblock.length; index++) {
-      dropdown[index].addEventListener('touchend', function () {
-        console.log(practblock[index]);
-        if (clicking) {
-          practblock[index].classList.remove("clicked");
-          dropdown[index].setAttribute('src', 'icons/dropdown.png');
-          clicking = false;
-        } else {
-          practblock[index].classList.add("clicked");
-          dropdown[index].setAttribute('src', 'icons/dropup.png');
-          clicking = true;
-        }
-      })
-
-    }
-    let practmenu = document.getElementById("practmenu");
-    practmenu.addEventListener('click', function() {
-      for (let index = 0; index < practblock.length; index++) {
-        practblock[index].classList.add("clicked");
-        dropdown[index].setAttribute('src', 'icons/dropup.png');
-          clicking = true;
-      }
-    })
-    //BIG SCREENS
-    var hovering = false;
-    for (let index = 0; index < practblock.length; index++) {
-      practblock[index].addEventListener('mouseover', function () {
-        console.log(practblock[index]);
-        practblock[index].classList.add("hover");
-      })
-      practblock[index].addEventListener('mouseout', function () {
-        practblock[index].classList.remove("hover");
-
-      })
-    }
-  </script>
+  <script src="script.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
