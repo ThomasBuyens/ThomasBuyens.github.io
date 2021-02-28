@@ -28,6 +28,24 @@ next[0].addEventListener('click', function () {
   }
   intro.setAttribute('class', introArray[slidePosition]);
 })
+
+//PRELOAD IMAGES
+let images = ["pictures/abdel_diving.jpg", "pictures/dive2.jpg", "pictures/dive.jpg", "pictures/water.jpg", "pictures/vub-pool.jpg"];
+function loadImages(images, index, callback) {
+  if (index < images.length) {
+      let img = new Image();
+      img.src = images[index];
+      images[index] = img;
+      images[index].onload = function() {
+          loadImages(images, ++index, callback);
+      };
+  } else {
+      callback(images);
+  }
+}
+window.onload = function() {
+  loadImages(images, 0, (images) => {
+  });
 //SMALL SCREENS
 let menu_click = document.getElementById("mobile-menu");
 let menu = document.getElementById("mainmenu");
@@ -81,4 +99,4 @@ for (let index = 0; index < practblock.length; index++) {
     practblock[index].classList.remove("hover");
 
   })
-}
+}}
