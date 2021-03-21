@@ -51,6 +51,7 @@ footer {
     background-color: black;
     color: whitesmoke;
     padding:  0 1em;
+    text-align: center;
 }
 
 @media screen AND ( max-width: 450px) {
