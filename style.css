@@ -21,11 +21,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content:flex-start;
     box-sizing: border-box;
     position: absolute;
     z-index: 1;
-    
+    height: 100vh;
+    width: 100%;
 }
 
 h1 {
@@ -37,12 +38,41 @@ button {
     font-size: 2em;
 }
 
+#score {
+    display: none;
+    margin: 0;
+}
+
 .quoteBox {
     margin-top: 1em;
-    font-size: 3em;
+    font-size: 2em;
     max-width: 90%;
     text-align: center;
     color: rgb(0, 0, 0);
+}
+.quoteBox > p {
+    margin: 0;
+}
+.headButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    align-self: flex-end;
+    width: 100%;
+}
+.headButtons > * {
+    max-width: 5em;
+
+    /* background-color: rgba(245, 245, 245, 0.055); */
+    margin: 0.2em;
+    border-radius: 1em;
+}
+
+.headButtons > *:hover {
+    border: rgb(255, 255, 0) solid 1px;
+    box-sizing: border-box;
 }
 
 footer {
