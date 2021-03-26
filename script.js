@@ -28,7 +28,7 @@ let counter = 0;
 shuffleArray(array);
 bouton.addEventListener('click', function() {
     bouton.style.display = "none";
-    scoreText.innerHTML = `Ton score: ${score}`
+    scoreText.innerHTML = `Ton score: ${score}/${quotes.length}`
     scoreText.style.display = "block";
     quote.innerHTML = `\"${repliques[array[counter]].phrase}"`;
 
@@ -47,13 +47,13 @@ for (let index = 0; index < 8; index++) {
 
         if (document.getElementsByClassName('headButton')[index].id === repliques[array[counter- 1]].personage) {
             score++;
-            scoreText.innerHTML = `Bien joué. Ton score: ${score}`
+            scoreText.innerHTML = `Bien joué. Ton score: ${score}/${quotes.length}`
         } else {
-            scoreText.innerHTML = `Raté. Tu es archi nul ! Ton score: ${score}`
+            scoreText.innerHTML = `Raté. Tu es archi nul ! Ton score: ${score}/${quotes.length}`
         }
         counter++;
         if (counter === quotes.length) {
-            scoreText.innerHTML = `Ton score final: ${score}`
+            scoreText.innerHTML = `Ton score final: ${score}/${quotes.length}`
             shuffleArray(array);
             bouton.innerHTML = "Je recommence alé"
             bouton.style.display = "block";
