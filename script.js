@@ -23,6 +23,7 @@ function shuffleArray(array) {
 let bouton = document.getElementById('boutonStart');
 let quote = document.getElementById('kluut');
 let scoreText = document.getElementById('score');
+let explication = document.getElementById('explication');
 let score = 0;
 let counter = 0;
 shuffleArray(array);
@@ -31,7 +32,8 @@ bouton.addEventListener('click', function() {
     scoreText.innerHTML = `Ton score: ${score}/${quotes.length}`
     scoreText.style.display = "block";
     quote.innerHTML = `\"${repliques[array[counter]].phrase}"`;
-
+    explication.innerHTML = `Clique sur le perso qui exprime la replique affichée.`;
+    explication.style.background = "none";
     counter++;
     if (counter === quotes.length) {
         shuffleArray(array);
@@ -42,8 +44,7 @@ bouton.addEventListener('click', function() {
 for (let index = 0; index < 8; index++) {
     document.getElementsByClassName('headButton')[index].addEventListener('click' ,() => {
         quote.innerHTML = `\"${repliques[array[counter]].phrase}"`;
-        console.log(document.getElementsByClassName('headButton')[index].id);
-        console.log(repliques[array[counter]].personage);
+        console.log(counter);
 
         if (document.getElementsByClassName('headButton')[index].id === repliques[array[counter- 1]].personage) {
             score++;
@@ -55,6 +56,8 @@ for (let index = 0; index < 8; index++) {
         if (counter === quotes.length) {
             scoreText.innerHTML = `Ton score final: ${score}/${quotes.length}`
             shuffleArray(array);
+            explication.style.backgroundColor = "white";
+            explication.innerHTML = `Tu t'es amusé(e) ? C'était nul à chier ? Dans tous les cas, t'as qu'a me le dire en face. Salut hein !`
             bouton.innerHTML = "Je recommence alé"
             bouton.style.display = "block";
             counter = 0;
