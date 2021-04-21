@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puke educator</title>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom right, grey, white);
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        body > * {
+            max-width: 100%;
+        }
+        .questionBox {
+            display: none;
+
+
+        }
+        .imageBox {
+            display: flex;
+            justify-content: center;
+            max-width: 100%;
+        }
+        img {
+            margin: 1em;
+            box-sizing: border-box;
+            max-width: 45%;
+            height: auto;
+            border-radius: 1em;
+            opacity: 0.9;
+            box-shadow: 5px 10px 8px #888888;
+
+        }
+        img:hover{
+            opacity: 1;
+            box-shadow: 8px 14px 8px #888888;
+        }
+        
+        #finalscore {
+            display: none;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the puke educator.</h1>
+    <p>This online quiz was created for people who consistently make the wrong choices regarding their choice of vomit spots.
+        Have you ever puked in a public area, a sink or even on yourself? Well that's just sad. Luckily this website was
+        created to train you to avoid such embarassing situations in the future.<br> Also, you could consider just drinking responsably.</p>
+    <button id="startButton">Let's play</button>
+    <section>
+        <div class="questionBox">
+            <p>Select the best option</p>
+        <div class="imageBox">
+            <img src="pictures/bag.jpg" alt="">
+            <img src="pictures/plasticBag.jpg" alt="">
+        </div>
+        <button class="confirm">Confirm</button>
+        </div>
+        <div class="questionBox">
+            <p>Select the best option</p>
+        <div class="imageBox">
+            <img src="pictures/toilet.jpg" alt="">
+            <img src="pictures/sink.jpg" alt="">
+        </div>
+        <button class="confirm">Confirm</button>
+        </div>
+        <div class="questionBox">
+            <p>Select the best option</p>
+        <div class="imageBox">
+            <img src="pictures/trash.jpg" alt="">
+            <img src="pictures/carseat.jpg" alt="">
+        </div>
+        <button class="confirm">Confirm</button>
+        </div>
+        <div class="questionBox">
+            <p>Select the best option</p>
+        <div class="imageBox">
+            <img src="pictures/tree-with-hole.png" alt="">
+            <img src="pictures/bed.jpg" alt="">
+        </div>
+        <button class="confirm">Confirm</button>
+        </div>
+        <div class="questionBox">
+            <p>Select the best option</p>
+        <div class="imageBox">
+            <img src="pictures/emmer.jpg" alt="">
+            <img src="pictures/couch.jpg" alt="">
+        </div>
+        <button class="confirm">Confirm</button>
+        </div>
+        <p id="finalscore">Your score is </p>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
