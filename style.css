@@ -1,0 +1,349 @@
+body {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  #games {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card {
+    margin: 1em;
+    background: radial-gradient(white, rgb(125, 127, 138));
+  }
+
+  #left {
+    padding: 1em;
+  }
+
+  #name-input {
+    display: flex;
+  }
+
+  #name-input input:first-child {
+    margin-right: 0.2em;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin: 1em 0;
+  }
+
+  .contact-item p {
+    margin: 0;
+  }
+
+  .contact-item>img {
+    max-width: 1em;
+    max-height: 1em;
+  }
+
+  #contact h2 {
+    margin-top: 0;
+    color: #FF6600;
+  }
+
+  #contact p a {
+    text-decoration: none;
+    color: #003399;
+
+  }
+
+  #contact p {
+    margin: 0;
+  }
+
+  #contact img {
+    height: 1em;
+    margin-right: 0.5em;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  form>* {
+    margin: 0.2em;
+    box-sizing: border-box;
+    max-width: 99%;
+    width: 100%;
+  }
+
+  #name-input>* {
+    max-width: 100%;
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .knop {
+    background-color: #FF6600;
+    color: rgb(235, 235, 235);
+
+  }
+
+  .card:nth-child(1) {
+    animation-name: animationOne;
+    opacity: 1;
+    
+    /*Lengthoftheanimation*/
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes animationOne {
+    0% {
+      transform: translate(20em, 0em);
+      opacity: 0;
+    }
+  }
+  .card:nth-child(2) {
+    animation-name: animationTwo;
+    /*Lengthoftheanimation*/
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes animationTwo {
+    0% {
+      transform: translate(0em, 0em);
+      opacity: 1;
+    }
+  }
+
+  .card:nth-child(3) {
+    animation-name: animationTree;
+    /*Lengthoftheanimation*/
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes animationTree {
+    0% {
+      transform: translate(-20em, 0em);
+      opacity: 0;
+
+    }
+  }
+  
+  @media screen AND (max-width: 450px) {
+    #games {
+      flex-direction: column;
+    }
+  }
+#ball {
+    position: relative;
+    left: -13em;
+    width: 1em;
+    height: 1em;
+    background-color: rgb(255, 60, 0);
+    border-radius: 2em;
+    animation: ball 3.25s linear 1.625s  infinite;
+}
+@keyframes ball {
+    6.25% {
+        transform: translate(27.885px, -16px);
+    }
+    12.5% {
+        transform: translate(55.885px, 16px);
+    }
+    18.75% {
+        transform: translate(83.655px, -16px);
+    }
+    25% {
+        transform: translate(111.54px, 16px);
+    }
+    31.250% {
+        transform: translate(139.425px, -16px);
+    }
+    37.50% {
+        transform: translate(167.31px, 16px);
+    }
+    43.750% {
+        transform: translate(195.195px, -16px);
+    }
+    50% {
+        transform: translate(223.08px, 16px);
+    }
+    56.25% {
+        transform: translate(250.965px, -16px);
+    }
+    62.5% {
+        transform: translate(278.85px, 16px);
+    }
+    68.75% {
+        transform: translate(306.735px, -16px);
+    }
+    75% {
+        transform: translate(334.62px, 16px);
+    }
+    81.25% {
+        transform: translate(362.47px, -16px);
+    }
+    87.5% {
+        transform: translate(390.355px, 16px);
+    }
+    93.75% {
+        transform: translate(200px, -70px);
+    }
+    100% {
+        /* transform: translate(200px, -32px); */
+    }
+
+}
+li:first-of-type {
+    width: 60px;
+}
+li {
+    width: 55.8px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    font-size: 5em;
+    letter-spacing: 0em;
+}
+ul > * {
+    color: #484848;
+}
+
+li:nth-of-type(1) {
+    animation: one 3.25s 0s  infinite;
+}
+li:nth-of-type(2) {
+    animation: two 3.25s linear 0.4s infinite;
+}
+li:nth-of-type(3) {
+    animation: three 3.25s linear 0.8s infinite;
+}
+li:nth-of-type(4) {
+    animation: four 3.25s linear 1.2s infinite;
+}
+li:nth-of-type(5) {
+    animation: five 3.25s linear 1.6s infinite;
+}
+li:nth-of-type(6) {
+    animation: six 3.25s linear 2s infinite;
+}
+li:nth-of-type(7) {
+    animation: seven 3.25s linear 2.4s infinite;
+}
+li:nth-of-type(8) {
+    animation: eight 3.25s linear 2.8s infinite;
+}
+
+@keyframes one {
+    40% {
+        color: #484848;
+    }
+    50% {
+        color: yellow;
+        transform: translateY(0.1em); 
+    }
+
+    60% {
+        color: #484848;
+        transform: rotate(10deg);
+    }
+}
+@keyframes two {
+    40% {
+        color: #484848;
+    }
+    50% {
+        color: yellow;
+        transform: translateY(0.1em);
+    }
+    60% {
+        color: #484848;
+        transform: rotate(10deg);
+    }
+}
+@keyframes three {
+    40% {
+        color: #484848;
+    }
+    50% {
+        color: yellow;
+        transform: translateY(0.1em);
+    }
+    60% {
+        color: #484848;
+        transform: rotate(10deg);
+    }
+}
+@keyframes four {
+    40% {
+        color: #484848;
+    }
+    50% {
+        color: yellow;
+        transform: translateY(0.1em);
+    }
+    60% {
+        color: #484848;
+        transform: rotate(10deg);
+    }
+}
+@keyframes five {
+    40% {
+        color: #484848;
+    }
+    50% {
+        color: yellow;
+        transform: translateY(0.1em);
+    }
+    60% {
+        color: #484848;
+        transform: rotate(10deg);
+    }
+}
+@keyframes six {
+    40% {
+        color: #484848;
+    }
+    50% {
+        color: yellow;
+        transform: translateY(0.1em);
+    }
+    60% {
+        color: #484848;
+        transform: rotate(10deg);
+    }
+}
+@keyframes seven {
+    40% {
+        color: #484848;
+    }
+    50% {
+        color: yellow;
+        transform: translateY(0.1em);
+    }
+    60% {
+        color: #484848;
+        transform: rotate(10deg);
+    }
+}
+@keyframes eight {
+    40% {
+        color: #484848;
+    }
+    50% {
+        color: yellow;
+        transform: translateY(0.1em);
+    }
+    60% {
+        color: #484848;
+        transform: rotate(-10deg);
+    }
+}
