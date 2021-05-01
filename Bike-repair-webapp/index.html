@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Animated Login Form</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src=
-    "https://smtpjs.com/v3/smtp.js">
-  </script>
+	<script src="https://smtpjs.com/v3/smtp.js">
+	</script>
 
 </head>
+
 <body>
 	<img class="wave" src="img/wave.png">
 	<div class="container">
@@ -21,37 +22,41 @@
 			<form action="index.html">
 				<img src="img/avatar.svg">
 				<h2 class="title">Connecte toi</h2>
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Ton petit nom</h5>
-           		   		<input type="text" class="input" id="username">
-           		   </div>
-           		</div>
-           		<div class="input-div pass">
-           		   <div class="i"> 
-           		    	<i class="fas fa-lock"></i>
-           		   </div>
-           		   <div class="div">
-           		    	<h5>Ton code incrackable</h5>
-           		    	<input type="password" class="input" id="code">
-            	   </div>
-            	</div>
-            	<input type="submit" class="btn" id="bouton" value="Login">
-            </form>
-        	</div>
-			<div id="user_div" class="loggedin-div">
-				<h3>Hey Jeanne !</h3>
-				<p id="user_para">Pousse sur la licorne pour une réparation urgente de vélo.</p>
-				<form action="" method="post">
+				<div class="input-div one">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+						<h5>Ton petit nom</h5>
+						<input type="text" class="input" id="username">
+					</div>
+				</div>
+				<div class="input-div pass">
+					<div class="i">
+						<i class="fas fa-lock"></i>
+					</div>
+					<div class="div">
+						<h5>Ton code incrackable</h5>
+						<input type="password" class="input" id="code">
+					</div>
+				</div>
+				<input type="submit" class="btn" id="bouton" value="Login">
+			</form>
+		</div>
+		<div id="user_div" class="loggedin-div">
+			<h3>Hey Jeanne !</h3>
+			<p id="user_para">Pousse sur la licorne pour une réparation urgente de vélo.</p>
+			<form action="" method="post">
 				<img id="unicorn" src="img/undraw_unicorn_dp2f.png" alt="unicorn">
 			</form>
-				<p id="toFill"></p>
-				<button id="logOut" onclick="backToLogIn()">Logout</button>
-			</div>
-    </div>
-<script src="js/main.js"></script>
+			<figure id="figuur">
+				<img id="one" src="img/JEANNE1.jpg" alt="Jeanne">
+
+			  </figure>
+			<button id="logOut" onclick="backToLogIn()">Logout</button>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
 </body>
+
 </html>

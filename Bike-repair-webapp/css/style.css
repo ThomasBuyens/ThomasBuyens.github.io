@@ -46,7 +46,7 @@ body{
 
 form{
 	width: 360px;
-	margin-top: 1em;
+	margin-top: 0.5em;
 }
 
 .login-content img{
@@ -194,6 +194,30 @@ a:hover{
 	height: auto;
 }
 
+figure {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	width: 40%;
+	max-height: 20em;
+
+	margin: 0 auto;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 10px 14px rgba(0, 0, 0, .6);
+	overflow: hidden;
+  }
+
+  figure img {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	margin: 0.5em 0.5em 0.5em 0.5em ;
+	overflow: hidden;
+  }
+  
+
+
 #logOut {
 	display: block;
 	width: 100%;
@@ -211,6 +235,8 @@ a:hover{
 	cursor: pointer;
 	transition: .5s;
 }
+
+
 @media screen and (max-width: 1050px){
 	.container{
 		grid-gap: 5rem;

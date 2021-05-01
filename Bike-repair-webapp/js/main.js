@@ -70,3 +70,16 @@ async function sendEmail() {
 	});
 	console.log('yes');
   }
+
+  let pics = ["img/JEANNE1.jpg", "img/JEANNE2.jpg", "img/JEANNE3.jpg", "img/JEANNE4.jpg", "img/JEANNE5.jpg", "img/JEANNE6.jpg"];
+
+  let figure = document.getElementById('figuur');
+  let index = 1;
+  figure.addEventListener('click', ()=> {
+	  if (index == 5) {
+		  index = 0
+	  }
+	  console.log(pics[index]);
+	  document.getElementById('one').src = pics[index];
+	  index++;
+  })
