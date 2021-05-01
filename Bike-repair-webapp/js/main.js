@@ -18,52 +18,55 @@ inputs.forEach(input => {
 	input.addEventListener("focus", addcl);
 	input.addEventListener("blur", remcl);
 });
+let userDisplay = document.getElementById('user_div');
+userDisplay.style.display = "none";
+let jeanne = "Jeanne Cosyn";
+let jeanneCode ="Licorne";
 
 
 
+let button = document.getElementById('bouton');
+form = document.getElementsByTagName('form')[0];
 
-firebase.auth().onAuthStateChanged(function(user) {
-	if (user) {
-	  // User is signed in.
-  
-	  document.getElementById("user_div").style.display = "block";
-	  document.getElementById("login-content").style.display = "none";
-  
-	  var user = firebase.auth().currentUser;
-  
-	  if(user != null){
-  
-		var email_id = user.email;
-		document.getElementById("user_para").innerHTML = "Coucou Jeanne : " + email_id;
-  
-	  }
-  
+form.addEventListener('submit', event => {
+	let userName = document.getElementById("username").value;
+	let userPass = document.getElementById("code").value;
+	console.log('testButton');
+	event.preventDefault();
+	if(jeanne == userName && jeanneCode == userPass) {
+		console.log('test');
+		document.getElementsByClassName('login-content')[0].style.display = "none";
+		userDisplay.style.display = "flex";
 	} else {
-	  // No user is signed in.
-  
-	  document.getElementById("user_div").style.display = "none";
-	  document.getElementById("login_div").style.display = "block";
-  
+		alert("Tu n'as pas inseré le bon nom et/ou code. Ressaie.");
 	}
-  });
-  
-  function login(){
-  
-	var userEmail = document.getElementById("email_field").value;
-	var userPass = document.getElementById("password_field").value;
-  
-	firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-	  // Handle Errors here.
-	  var errorCode = error.code;
-	  var errorMessage = error.message;
-  
-	  window.alert("Error : " + errorMessage);
-  
-	  // ...
+})
+
+function backToLogIn() {
+	form.reset();
+	userDisplay.style.display = "none";
+	document.getElementsByClassName('login-content')[0].style.display = "block";
+	unicorn.src = 'img/undraw_unicorn_dp2f.png';
+	document.getElementById('user_para').innerText = "Pousse sur la licorne pour une réparation urgente de vélo.";
+}
+
+let unicorn = document.getElementById('unicorn');
+
+unicorn.addEventListener('click', () => {
+	sendEmail();
+	unicorn.src = 'img/party.png';
+	document.getElementById('user_para').innerText = "Thomas a bien reçu ton message !";
+})
+
+async function sendEmail() {
+	Email.send({
+	  Host: "smtp.gmail.com",
+	  Username: "starttoswim.info@gmail.com",
+	  Password: "SendAutoMails",
+	  To: 'tbuyens@hotmail.com',
+	  From: "starttoswim.info@gmail.com",
+	  Subject: "Vélo cassé",
+	  Body: "Please help",
 	});
-  
-  }
-  
-  function logout(){
-	firebase.auth().signOut();
+	console.log('yes');
   }
