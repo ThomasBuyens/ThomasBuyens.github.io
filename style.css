@@ -6,7 +6,23 @@ body {
     background: black;
     text-align: center;
     overflow: hidden;
+    background: linear-gradient(-45deg, #ffffff, #4e4c4c, #ffffff, #4e4c4c);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
   }
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 
   #games {
     display: flex;
