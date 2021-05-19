@@ -51,11 +51,13 @@ function backToLogIn() {
 }
 
 let unicorn = document.getElementById('unicorn');
-
+let problemDescription;
 unicorn.addEventListener('click', () => {
+	problemDescription = document.getElementById('problemDescription').value;
 	sendEmail();
 	unicorn.src = 'img/party.png';
 	document.getElementById('user_para').innerText = "Thomas a bien reçu ton message !";
+	console.log(problemDescription);
 })
 
 async function sendEmail() {
@@ -66,9 +68,9 @@ async function sendEmail() {
 	  To: 'tbuyens@hotmail.com',
 	  From: "starttoswim.info@gmail.com",
 	  Subject: "Vélo cassé",
-	  Body: "Please help",
+	  Body: problemDescription,
 	});
-	console.log('yes');
+	
   }
 
   let pics = ["img/JEANNE1.jpg", "img/JEANNE2.jpg", "img/JEANNE3.jpg", "img/JEANNE4.jpg", "img/JEANNE5.jpg", "img/JEANNE6.jpg"];
