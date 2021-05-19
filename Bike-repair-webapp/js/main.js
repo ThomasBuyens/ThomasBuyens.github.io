@@ -58,6 +58,7 @@ unicorn.addEventListener('click', () => {
 	unicorn.src = 'img/party.png';
 	document.getElementById('user_para').innerText = "Thomas a bien reçu ton message !";
 	console.log(problemDescription);
+	form.reset();
 })
 
 async function sendEmail() {
